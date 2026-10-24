@@ -1,0 +1,14 @@
+{
+  "name": "multipost-ai",
+  "version": "1.0.0",
+  "description": "MultiPost AI - Social media automation platform",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "build": "echo 'No build step needed for static site'"
+  },
+  "dependencies": {
+    "wrangler": "^3.67.0"
+  }
+}
