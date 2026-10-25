@@ -17,9 +17,6 @@
     "production": {
       "routes": [
         {
-          "pattern": "multipost-ai.prakhars1994.workers.dev/*"
-        },
-        {
           "pattern": "multipost-ai.vdldigital.com",
           "zone_name": "vdldigital.com"
         }
