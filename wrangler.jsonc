@@ -17,7 +17,7 @@
     "production": {
       "routes": [
         {
-          "pattern": "multipost-ai.vdldigital.com",
+          "pattern": "multipost-ai.vdldigital.com/*",
           "zone_name": "vdldigital.com"
         }
       ]
