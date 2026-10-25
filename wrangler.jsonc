@@ -1,6 +1,16 @@
 {
-  "name": "multipost-ai",
+  "$schema": "node_modules/wrangler/config-schema.json",
   "main": "src/index.mjs",
+  "name": "multipost-ai",
   "compatibility_date": "2026-10-24",
-  "compatibility_flags": ["nodejs_compat"]
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "env": {
+    "production": {
+      "assets": {
+        "directory": "public",
+        "binding": "ASSETS"
+      }
+    }
+  }
 }
