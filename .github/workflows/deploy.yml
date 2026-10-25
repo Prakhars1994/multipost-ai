@@ -45,13 +45,9 @@ jobs:
             echo "Cloudflare credentials not available; skipping deployment."
           fi
 
-      - name: Install dependencies
-        if: steps.cloudflare.outputs.available == 'true'
-        run: npm ci --prefer-offline --no-audit --no-fund
-
       - name: Deploy to Cloudflare Workers
         if: steps.cloudflare.outputs.available == 'true'
-        run: npx wrangler deploy --env production
+        run: npx -y wrangler deploy --env production
 
       - name: Verify deployment
         if: steps.cloudflare.outputs.available == 'true'
