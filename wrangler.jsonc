@@ -16,10 +16,7 @@
   "env": {
     "production": {
       "routes": [
-        {
-          "pattern": "multipost-ai.vdldigital.com/*",
-          "zone_id": "4eb8b9200a5983f837ce195e12f5b154"
-        }
+        "multipost-ai.vdldigital.com/*"
       ]
     }
   }
