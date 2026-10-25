@@ -4,17 +4,21 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    
-    // Serve static assets
+
+    // Try to serve static asset
     if (env.ASSETS) {
-      return env.ASSETS.fetch(request);
+      const assetResponse = await env.ASSETS.fetch(request);
+      if (assetResponse.status !== 404) {
+        return assetResponse;
+      }
     }
-    
+
     // Fallback: serve index.html for SPA routing
-    if (url.pathname === '/' || url.pathname === '') {
-      return env.ASSETS.fetch(new Request(url.origin + '/index.html'));
+    const indexRequest = new Request(url.origin + '/index.html', request);
+    if (env.ASSETS) {
+      return env.ASSETS.fetch(indexRequest);
     }
-    
+
     return new Response('Not Found', { status: 404 });
   },
 };
