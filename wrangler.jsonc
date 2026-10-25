@@ -7,16 +7,8 @@
   "observability": { "enabled": true },
   "routes": [
     {
-      "pattern": "multipost-ai.prakhars1994.workers.dev/*",
+      "pattern": "multipost-ai-production.vliab.workers.dev/*",
       "zone_name": "workers.dev"
     }
-  ],
-  "env": {
-    "production": {
-      "assets": {
-        "directory": "public",
-        "binding": "ASSETS"
-      }
-    }
-  }
+  ]
 }
