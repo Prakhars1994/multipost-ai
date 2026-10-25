@@ -15,6 +15,10 @@
   },
   "env": {
     "production": {
+      "assets": {
+        "directory": "public",
+        "binding": "ASSETS"
+      }
     }
   }
 }
