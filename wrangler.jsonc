@@ -4,10 +4,5 @@
   "name": "multipost-ai",
   "compatibility_date": "2026-10-24",
   "compatibility_flags": ["nodejs_compat"],
-  "observability": { "enabled": true },
-  "routes": [
-    {
-      "pattern": "multipost-ai-production.vliab.workers.dev/*"
-    }
-  ]
+  "observability": { "enabled": true }
 }
