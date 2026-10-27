@@ -7,8 +7,7 @@
   "observability": { "enabled": true },
   "routes": [
     {
-      "pattern": "multipost-ai-production.vliab.workers.dev/*",
-      "zone_name": "workers.dev"
+      "pattern": "multipost-ai-production.vliab.workers.dev/*"
     }
   ]
 }
